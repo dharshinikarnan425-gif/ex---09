@@ -1,63 +1,117 @@
-Implementation of Erosion and Dilation Using OpenCV
-Aim
-To write a Python program using OpenCV to perform morphological operations such as Erosion and Dilation on an image.
+# Opening and Closing Operations Using OpenCV
+
+## Aim
+
+To write a Python program using OpenCV to perform morphological Opening and Closing operations on an image.
 
 The program performs the following operations:
 
-Image Erosion
-Image Dilation
-Software Used
-Anaconda – Python 3.7
-Jupyter Notebook / VS Code
-OpenCV (cv2)
-NumPy
-Matplotlib
-Algorithm
-Step 1:
+- Morphological Opening
+- Morphological Closing
+
+## Software Used
+
+- Anaconda – Python 3.7
+- Jupyter Notebook / VS Code
+- OpenCV (cv2)
+- NumPy
+- Matplotlib
+
+## Algorithm
+
+### Step 1:
+
 Import the required libraries: OpenCV, NumPy, and Matplotlib.
 
-Step 2:
-Create a blank image using NumPy.
+### Step 2:
 
-Step 3:
-Insert text onto the image using OpenCV's text drawing function.
+Create or load an input image containing foreground objects.
 
-Step 4:
+### Step 3:
+
 Display the original image.
 
-Step 5:
+### Step 4:
+
 Create a structuring element (kernel) of suitable size.
 
-Step 6: Image Erosion
-Apply the erosion operation using the created kernel.
-Remove pixels from the boundaries of foreground objects.
-Display the eroded image.
-Step 7: Image Dilation
-Apply the dilation operation using the same kernel.
-Add pixels to the boundaries of foreground objects.
-Display the dilated image.
-Step 8:
-Compare the original, eroded, and dilated images.
+### Step 5: Opening Operation
 
-Program
-Developed By
-Name: DHARSHINI K
+- Apply the Opening operation using the structuring element.
+- Opening consists of Erosion followed by Dilation.
+- Remove small foreground noises while preserving the shape of larger objects.
+- Display the opened image.
 
-Register No: 212225240034
+### Step 6: Closing Operation
 
-Output
-Original Image
-A text image containing characters is displayed.
-The image serves as the input for morphological processing.
-Erosion
-Original image is displayed.
-Eroded image is displayed.
-The thickness of the characters is reduced.
-Object boundaries shrink inward.
-Dilation
-Original image is displayed.
-Dilated image is displayed.
-The thickness of the characters increases.
-Object boundaries expand outward.
-Result
-Thus, the morphological operations Erosion and Dilation are successfully implemented using OpenCV.
+- Apply the Closing operation using the structuring element.
+- Closing consists of Dilation followed by Erosion.
+- Fill small holes and gaps within foreground objects.
+- Display the closed image.
+
+### Step 7:
+
+Compare the original, opened, and closed images.
+
+## Program
+
+## Developed By
+
+**Name:** ____________________________
+
+**Register No:** ______________________
+
+## Output
+
+### Original Image
+
+- The input image is displayed.
+- The image serves as the source for morphological processing.
+
+### Opening Operation
+
+- Original image is displayed.
+- Opened image is displayed.
+- Small foreground noise is removed.
+- Thin protrusions and isolated pixels are eliminated.
+- Object boundaries become smoother.
+
+### Closing Operation
+
+- Original image is displayed.
+- Closed image is displayed.
+- Small holes and gaps inside objects are filled.
+- Broken regions are connected.
+- Object boundaries become more continuous.
+
+## Applications
+
+### Opening
+
+- Noise removal in binary images.
+- Separation of connected objects.
+- Preprocessing for object detection.
+
+### Closing
+
+- Filling small holes in objects.
+- Connecting nearby components.
+- Enhancing segmented regions.
+
+## Advantages
+
+### Opening
+
+- Removes unwanted foreground noise.
+- Preserves major object structures.
+- Improves segmentation quality.
+
+### Closing
+
+- Restores object continuity.
+- Eliminates small background gaps.
+- Improves object representation.
+
+## Result
+
+Thus, the morphological operations **Opening** and **Closing** are successfully implemented using OpenCV. 
